@@ -34,6 +34,5 @@ RUN composer install --no-dev --optimize-autoloader --no-interaction
 # Adjust permissions for Laravel storage and cache directories
 RUN chmod -R 775 /var/www/storage /var/www/bootstrap/cache
 
-# Expose port 8000 and start php artisan serve
-EXPOSE 8000
-CMD php artisan serve --host=0.0.0.0 --port=8000
+# Start php artisan serve using the dynamic PORT provided by Railway
+CMD php artisan serve --host=0.0.0.0 --port=$PORT
