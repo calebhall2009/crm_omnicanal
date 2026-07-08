@@ -1,0 +1,59 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs & Debug files
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+real_status.txt
+response_debug.txt
+*.tmp
+*.temp
+*.cache
+*.swp
+*.bak
+*_old.*
+*_backup.*
+*_copy.*
+
+# Environment & Secrets
+.env
+.env.backup
+.env.production
+*.pem
+*.key
+*.cert
+credentials.json
+serviceAccountKey.json
+
+# IDE & Editors
+.idea/
+.vscode/
+*.iml
+*.suo
+
+# Node & Frontend Build Outputs
+node_modules/
+dist/
+dist-ssr/
+build/
+
+# Python (ai-service & channels-service)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# PHP & Laravel
+vendor/
+.phpunit.result.cache
+storage/*.key
+public/hot
+public/storage
+public/build

@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker --version)",
+      "Bash(docker compose *)",
+      "Bash(docker-compose --version)",
+      "Bash(where docker *)",
+      "Read(//c/Program Files/**)",
+      "Read(//c/Program Files \\(x86\\)/**)",
+      "Bash(tasklist /FI \"PID eq 552\")",
+      "Bash(powershell -Command \"Get-Process -Id 552 | Select-Object Id,ProcessName,Path\" 2>&1)",
+      "Bash(php artisan *)",
+      "Bash(python -c \"import json,sys; data=json.load\\(sys.stdin\\); [print\\(r['method'], r['uri'], '|', r.get\\('middleware', []\\)\\) for r in data if 'login' in r['uri'].lower\\(\\) or 'register' in r['uri'].lower\\(\\) or 'sanctum' in r['uri'].lower\\(\\) or 'user' in r['uri'].lower\\(\\) or 'onboarding' in r['uri'].lower\\(\\) or 'logout' in r['uri'].lower\\(\\) or 'two-factor' in r['uri'].lower\\(\\)]\")",
+      "Bash(curl *)",
+      "Bash(powershell -Command \"Stop-Process -Id 552 -Force -ErrorAction SilentlyContinue; Start-Sleep -Milliseconds 500; Get-Process -Id 552 -ErrorAction SilentlyContinue | Select-Object Id,ProcessName\")",
+      "Bash(netstat -ano)",
+      "Bash(powershell -Command \"Stop-Process -Id 22628 -Force -ErrorAction SilentlyContinue; Start-Sleep -Milliseconds 500; netstat -ano | Select-String ':8000|:5173|:5174'\")",
+      "Bash(powershell -Command \"Stop-Process -Id 22808 -Force -ErrorAction SilentlyContinue; Get-Process node -ErrorAction SilentlyContinue | Stop-Process -Force; Start-Sleep -Seconds 1; netstat -ano | Select-String ':8000|:5173|:5174'\")"
+    ]
+  }
+}

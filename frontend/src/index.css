@@ -1,0 +1,105 @@
+@import "@fontsource/instrument-sans/400.css";
+@import "@fontsource/instrument-sans/500.css";
+@import "@fontsource/instrument-sans/600.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/500.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 97%; /* #F6F7F9 */
+    --foreground: 212 26% 10%; /* #12181F */
+
+    --card: 0 0% 100%; /* #FFFFFF */
+    --card-foreground: 212 26% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 212 26% 10%;
+
+    --primary: 186 75% 22%; /* #0E5B63 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 90%; /* #E2E5EA */
+    --secondary-foreground: 212 26% 10%;
+
+    --muted: 220 14% 90%; /* #E2E5EA */
+    --muted-foreground: 215 16% 34%; /* #4B5563 */
+
+    --accent: 180 26% 91%; /* #E3EEEE */
+    --accent-foreground: 212 26% 10%;
+
+    --destructive: 4 63% 46%; /* #C0362C */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 90%; /* #E2E5EA */
+    --input: 220 14% 90%;
+    --ring: 186 75% 22%; /* #0E5B63 */
+
+    --radius: 0.375rem; /* 6px */
+
+    /* Custom Semantics */
+    --success: 154 67% 32%; /* #1B8A5A */
+    --warning: 32 91% 37%; /* #B45309 */
+    --info: 211 63% 40%; /* #2563A6 */
+
+    /* Channels */
+    --channel-wa: 145 37% 50%; /* #4FAE79 */
+    --channel-ig: 337 56% 48%; /* #C1366B */
+    --channel-tg: 203 66% 54%; /* #3B9BD9 */
+  }
+
+  .dark {
+    --background: 213 18% 10%; /* #14181D */
+    --foreground: 214 15% 91%; /* #E7EAEE */
+
+    --card: 215 18% 13%; /* #1B2027 */
+    --card-foreground: 214 15% 91%;
+
+    --popover: 215 18% 13%;
+    --popover-foreground: 214 15% 91%;
+
+    --primary: 186 75% 22%; /* #0E5B63 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 214 16% 18%; /* #262C34 */
+    --secondary-foreground: 214 15% 91%;
+
+    --muted: 214 16% 18%; /* #262C34 */
+    --muted-foreground: 216 11% 65%; /* #9BA3AF */
+
+    --accent: 178 35% 14%; /* #17302F */
+    --accent-foreground: 214 15% 91%;
+
+    --destructive: 4 63% 46%; /* #C0362C */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 16% 18%; /* #262C34 */
+    --input: 214 16% 18%;
+    --ring: 186 75% 22%; /* #0E5B63 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6, .display-text {
+    font-family: 'Instrument Sans', sans-serif;
+  }
+  code, pre, .mono-text {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .tabular-data {
+    font-variant-numeric: tabular-nums;
+  }
+}
