@@ -2,6 +2,7 @@ import Echo from 'laravel-echo';
 import Pusher from 'pusher-js';
 
 // Attach Pusher to window so Echo can find it
+// @ts-ignore
 window.Pusher = Pusher;
 
 export const echo = new Echo({
