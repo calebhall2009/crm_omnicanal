@@ -61,7 +61,8 @@ export const Register: React.FC = () => {
 
   // Fetch plans on mount
   useEffect(() => {
-    fetch('http://localhost:8000/api/plans')
+    const backendUrl = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:8000';
+    fetch(`${backendUrl}/api/plans`)
       .then((res) => res.json())
       .then((data) => {
         setPlans(data);

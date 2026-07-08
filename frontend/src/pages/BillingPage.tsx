@@ -24,9 +24,11 @@ export const BillingPage: React.FC = () => {
     fetchBillingInfo();
   }, []);
 
+  const backendUrl = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:8000';
+
   const fetchBillingInfo = async () => {
     try {
-      const res = await fetch('/api/billing/info', {
+      const res = await fetch(`${backendUrl}/api/billing/info`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       const data = await res.json();
@@ -40,7 +42,7 @@ export const BillingPage: React.FC = () => {
 
   const handleCheckout = async (planSlug: string) => {
     try {
-      const res = await fetch('/api/billing/checkout', {
+      const res = await fetch(`${backendUrl}/api/billing/checkout`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

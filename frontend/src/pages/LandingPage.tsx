@@ -35,7 +35,8 @@ export const LandingPage: React.FC = () => {
   const [activeModule, setActiveModule] = useState<'inbox' | 'kanban' | 'dashboard'>('inbox');
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/plans')
+    const backendUrl = import.meta.env.VITE_BACKEND_API_URL || 'http://localhost:8000';
+    fetch(`${backendUrl}/api/plans`)
       .then((res) => res.json())
       .then((data) => {
         setPlans(data);
